@@ -15,36 +15,41 @@ public class TicTacToe
     final int SIZE = 3;
     char[][] board = new char[SIZE][SIZE]; // game board
 
-    //resetBoard(board); // initialize the board (with ' ' for all cells)
+    resetBoard(board); // initialize the board (with ' ' for all cells)
 
-    // First, welcome message and display the board.
-    System.out.println("===== WELCOME TO THE TIC-TAC-TOE GAME!! =====\n");
-    showBoard(board);
+    //First lets welcome the user!!! Print a welcome message
+    //-------------------------------------------------------------------
 
-    // Then ask the user which symbol (x or o) he/she wants to play.
-    System.out.print("  Which symbol do you want to play, \"x\" or \"o\"? ");
-    char userSymbol = sc.next().toLowerCase().charAt(0);
-    char compSymbol = (userSymbol == 'x') ? 'o' : 'x';
 
-    // Also ask whether or not the user wants to go first.
-    System.out.println();
-    System.out.print("  Do you want to go first (y/n)? ");
-    char ans = sc.next().toLowerCase().charAt(0);
+    //Now we need to show the board -- what method might come in use here?
+    //-------------------------------------------------------------------
+    
+   
+    //Now the user needs to pick what character they want -- "o" or "x"
+    //tell them that!! Print out a message
+    //-------------------------------------------------------------------
 
-    int turn;  // 0 -- the user, 1 -- the computer
+
+    //Now we need to store the user's result -- what might come in handy 
+    //here? 
+    //Note variables are provided
+    //-------------------------------------------------------------------
+    char userSymbol = 'W'; //Fill me in!!!
+    char compSymbol = 'I'; //Fill me in!!!
+
+    //Here are some values we provide you -- turn keeps track of 
+    //whose turn it is and remainCount keeps track of the empty
+    //spaces
+    int turn = 0;  // 0 -- the user, 1 -- the computer
     int remainCount = SIZE * SIZE; // empty cell count
 
-    // THE VERY FIRST MOVE.
-    if (ans == 'y') {
-      turn = 0;
-      userPlay(board, userSymbol); // user puts his/her first tic
-    }
-    else {
-      turn = 1;
-      compPlay(board, compSymbol); // computer puts its first tic
-    }
-    // Show the board, and decrement the count of remaining cells.
-    showBoard(board);
+    //Now the user is going to play -- what method might be helpful here? 
+    //-------------------------------------------------------------------
+    
+    //Okay great!!! the user has entered a move -- what do we need to
+    //do?
+    //-------------------------------------------------------------------
+    
     remainCount--;
 
     // Play the game until either one wins.
