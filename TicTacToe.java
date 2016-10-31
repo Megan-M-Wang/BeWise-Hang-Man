@@ -30,12 +30,8 @@ public class TicTacToe
     //-------------------------------------------------------------------
 
 
-    //Now we need to store the user's result -- what might come in handy 
-    //here? 
-    //Note variables are provided
-    //-------------------------------------------------------------------
-    char userSymbol = 'W'; //Fill me in!!!
-    char compSymbol = 'I'; //Fill me in!!!
+    char userSymbol = sc.next().toLowerCase().charAt(0);
+    char compSymbol = (userSymbol == 'x') ? 'o' : 'x';
 
     //Here are some values we provide you -- turn keeps track of 
     //whose turn it is and remainCount keeps track of the empty
