@@ -49,27 +49,48 @@ public class TicTacToe
     //Okay great!!! the user has entered a move -- what do we need to
     //do?
     //-------------------------------------------------------------------
-    
+
     remainCount--;
 
-    // Play the game until either one wins.
+    //Okay now we have some variables set up below -- see if you can read
+    //the comments to find out what they are used for
+    //-------------------------------------------------------------------
     boolean done = false;
     int winner = -1;   // 0 -- the user, 1 -- the computer, -1 -- draw
 
-    while (!done && remainCount > 0) {
-      // If there is a winner at this time, set the winner and the done flag to true.
-      done = isGameWon(board, turn, userSymbol, compSymbol); // Did the turn won?
+    //Now we need to continue playing the game -- what do we need to 
+    //put in the while loop to do this?? 
+    //Hint: You need two things (think about remainCount for one of them)
+    //-------------------------------------------------------------------
+    while (false /*Replace Me*/ ) {
 
+      //Now that we are "playing" we need to check if the game is "done"
+      //what method might help here?
+      //-------------------------------------------------------------------
+      done = false; //What should done equal to?
+
+      
+      //-------------------------------------------------------------------
+      //This code checks who was the last one to play and changes the turn
+      //read the comments to figure out how this works
       if (done)
         winner = turn; // the one who made the last move won the game
       else {
         // No winner yet.  Find the next turn and play.
         turn = (turn + 1 ) % 2;
 
-        if (turn == 0)
-          userPlay(board, userSymbol);
-        else
-          compPlay(board, compSymbol);
+      
+        //If the turn is 0 then who should play? Call the needed method
+        //-------------------------------------------------------------------
+        if (turn == 0) {
+         
+        }
+
+        //If the turn is not 0 (or equal to 1) then who should play?
+        //Call the needed method
+        //-------------------------------------------------------------------
+        else {
+        }
 
         // Show the board after one tic, and decrement the rem count.
         showBoard(board);
@@ -77,13 +98,20 @@ public class TicTacToe
       }
     }
 
-    // Winner is found.  Declare the winner.
+    //Winner is found!!!!!! Print out a victory message
+    //-------------------------------------------------------------------
     if (winner == 0)
-      System.out.println("\n** YOU WON.  CONGRATULATIONS!! **");
+      System.out.println("Print me");
+
+    //Player lost :( Print out a message of defeat
+    //-------------------------------------------------------------------
     else if (winner == 1)
-      System.out.println("\n** YOU LOST..  Maybe next time :) **");
+      System.out.println("Print me");
+    
+    //Tie!! Print out a message
+    //-------------------------------------------------------------------
     else
-      System.out.println("\n** DRAW... **");
+      System.out.println("Print me");
 
   }
 
